@@ -3,12 +3,12 @@ import "./style.css";
 
 function SearchForm(props) {
   return (
-    <form>
+    <form className="search">
       <div className="form-group">
-        <label htmlFor="search">Search:</label>
+        <label htmlFor="search">Breed Name:</label>
         <input
           onChange={props.handleInputChange}
-          value={props.value}
+          value={props.search}
           name="breed"
           list="breeds"
           type="text"
@@ -17,7 +17,7 @@ function SearchForm(props) {
           id="breed"
         />
         <br />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary">
+        <button onClick={props.handleFormSubmit} className="btn btn-success">
           Search
         </button>
       </div>

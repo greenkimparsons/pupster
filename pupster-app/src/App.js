@@ -6,12 +6,16 @@ import Discover from "./pages/Discover";
 import Search from "./pages/Search";
 
 function App() {
-  return(
+  return (
     <Router>
       <div>
-        <Route exact path="/about" component={About} />
-        <Route exact path="/discover" component={Discover} />
-        <Route exact path="/search" component={Search} />
+        <Navbar />
+        <Wrapper>
+          <Route exact path="/about" component={About} />
+          <Route exact path="/discover" component={Discover} />
+          <Route exact path="/search" component={Search} />
+        </Wrapper>
+        <Footer />
       </div>
     </Router>
   );
